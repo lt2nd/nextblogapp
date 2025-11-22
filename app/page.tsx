@@ -1,8 +1,6 @@
 // app/page.tsx
 "use client";
 import { useEffect, useState } from "react";
-import Header from "@/components/Header";
-import PostForm from "@/components/PostForm";
 import PostList from "@/components/PostList";
 import type { Post } from "@/models/types";
 
@@ -33,9 +31,8 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <p>Message from backend: <strong>{message}</strong></p>
-      <PostForm onCreate={(post) => setPosts([post, ...posts])} />
+      <h1>Recent Posts</h1>
+      <p>Check out the latest articles from our authors.</p>
       <PostList posts={posts} />
     </>
   );
